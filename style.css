@@ -1,0 +1,480 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Background color */
+    color: #333; /* Text color */
+  }
+  
+  .container {
+
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(135deg, #24303E, #007bff); /* Initial gradient */
+    padding: 10px 0;
+    color: #fff; /* Text color for the nav */
+    animation: changeColor 10s infinite; /* Animation to change the background color */
+    z-index: 999;
+  }
+  
+  @keyframes changeColor {
+    0%, 20% {
+      background-image: linear-gradient(135deg, #24303E, #007bff); /* Initial gradient */
+    }
+    30%, 50% {
+      background-image: linear-gradient(135deg, #007bff, #8A2BE2); /* Intermediate gradient */
+    }
+    60%, 80% {
+      background-image: linear-gradient(135deg, #8A2BE2, #FFA500); /* Intermediate gradient */
+    }
+    90%, 100% {
+      background-image: linear-gradient(135deg, #FFA500, #24303E); /* Final gradient */
+    }
+  }
+  
+  
+  
+  nav .container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #fff; /* Logo text color */
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff; /* Navbar link color */
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #13f0e8; /* Navbar link hover color */
+  }
+  
+ 
+  
+  section h2 {
+    margin-top: 0;
+  }
+  
+ 
+  
+  .bgimage {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.bgimage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    animation: backgroundFade 15s infinite; /* Adjust timing as needed */
+}
+
+@keyframes backgroundFade {
+    0%, 20% {
+        background-image: url('mine2.jpg'); /* First background image */
+    }
+    25%, 45% {
+        background-image: url('mera.jpg'); /* Second background image */
+    }
+    50%, 70% {
+        background-image: url('mera1.jpg'); /* Third background image */
+    }
+    75%, 95% {
+        background-image: url("mera2.jpg"); /* Fourth background image */
+    }
+    100% {
+        background-image: url('mera3.jpg'); /* Back to the first image for smooth loop */
+    }
+}
+
+
+
+/* text css above hero image*/
+.hero_title {
+    font-size: 4rem;
+    display:inline-block;
+}
+
+.hero_desc {
+    font-size: 2rem;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1; /* Ensure text is above overlay */
+}
+
+  /* about section image css */
+.imageAboutPage {
+    width: 100%;
+}
+
+
+/* About section */
+#about {
+    padding: 100px 0; /* Increase padding for more space */
+    background: url('aboutme.jpg') no-repeat center center ; /* Replace 'https://example.com/background-image.jpg' with the URL of your background image */
+    background-size: cover; /* Cover the entire section with the background image */
+    color: #fff; /* White text color */
+    font-family: Arial, sans-serif; /* Professional font stack */
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+#about h1 {
+    font-size: 3rem; /* Larger heading size */
+    text-align: center; /* Center align the heading */
+}
+
+.icard {
+    backdrop-filter: blur(5px);
+    border: 100px black; /* Remove default card border */
+    border-radius: 15px; /* Rounded corners */
+    position: relative; /* Position relative for absolute positioning */
+    overflow: hidden; /* Hide overflow for blur effect */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Border style and color */
+    
+}
+
+.icard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind other content */
+    border-radius: inherit; /* Inherit border-radius from parent */
+}
+
+
+.imageAboutPage {
+    width: 100%; /* Ensure image fills its container */
+    border-top-left-radius: 15px; /* Rounded corners for top left and top right */
+    border-top-right-radius: 15px;
+}
+
+#about p {
+    font-size: 1.2rem; /* Increase font size for better readability */
+    line-height: 1.6; /* Increase line height for better spacing */
+    padding: 20px; /* Add padding to paragraphs */
+    text-align: justify; /* Justify align paragraphs */
+}
+
+#about ul {
+    list-style-type: none; /* Remove default list styles */
+    padding-left: 0; /* Remove default list padding */
+}
+
+#about ul li {
+    padding-left: 20px; /* Add padding to list items */
+    position: relative; /* Position relative for pseudo-element */
+    color: #ffffff; /* Chemical green text color */
+}
+
+#about ul li:before {
+    content: "\2022"; /* Use bullet point character as list item marker */
+    position: absolute; /* Position absolute for pseudo-element */
+    left: 0; /* Position at the beginning of list item */
+    font-size: 1.2rem; /* Bullet point size */
+    margin-right: 5px; /* Space between bullet point and text */
+}
+
+  
+  
+  
+  
+  
+  
+
+/* services section css */
+.servicesme {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #services {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-image: url('edu.jpg');
+    background-size: cover;
+    background-position: fixed;
+    position: relative;
+    z-index: 1; /* Ensure the background is on top of other elements */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .servicesText.card {
+    backdrop-filter: blur(4px);
+    flex: 0 1 calc(30% - 20px);
+    margin-bottom: 20px;
+    height: 280px;
+    cursor: pointer;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .servicesText.card:hover {
+    box-shadow: 0 0 30px rgb(255, 207, 104); /* Apply glowing shadow effect on hover */
+    background-color:rgba(0, 0, 0, 0.309);
+  }
+  
+  .servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+  
+  .card:hover .servicesIcon {
+    color: #008000;
+  }
+  
+  .servicesText:hover {
+    border: 1px solid #008000;
+  } 
+  
+  
+
+
+
+  /* education */
+
+  .education {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background: url('books.jpg') center/cover;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+    height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px;
+  }
+  
+  .education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex: 0 1 calc(30% - 20px);
+  }
+   
+  .card:hover {
+    background-color:black;
+    box-shadow: 3px 4px 39px rgb(113, 84, 29);
+
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  /* Contact section */
+/* Contact section */
+.contact {
+    color:white;
+    height: 80vh; /* Set height to 100% of the viewport height */
+    display: flex; /* Use flexbox to center content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-image: url('cont.jpg');
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center; /* Center the background image */
+}
+  .contact h2 {
+    font-size: 2.5rem; /* Increase the font size */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  .contact address {
+    text-align: center; /* Center align the address */
+    font-size: 1.2rem; /* Increase the font size */
+    color: #ffffff; /* Darken the text color */
+    padding: 20px; /* Add padding for better spacing */
+    border:1px solid white;
+    border-radius: 10px; /* Add rounded corners to the address */
+    background:rgba(0, 0, 0, 0.565);
+   backdrop-filter:blur(1px); /* Add a white background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .contact address:hover {
+    box-shadow: 3px 4px 30px rgb(230, 83, 83);
+  }
+
+
+
+ 
+/* Thank You section */
+.thank-you {
+    color:white;
+    height: 100vh; /* Set the height to the full viewport height */
+    display: flex;
+    background-image:url('thanks.jpg');
+   background-size: cover; 
+   background-position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .thank-you h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .social-links {
+    font-size: 2rem;
+  }
+  
+  .social-links a {
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(135deg, #24303E, #007bff); /* Initial gradient */
+    padding: 20px 0; /* Adjust the padding as needed */
+    animation: changeColor 10s infinite; /* Animation to change the background color */
+    color: #fff; /* Text color for the footer */
+  }
+  
+  @keyframes changeColor {
+    0%, 20% {
+      background-image: linear-gradient(135deg, #24303E, #007bff); /* Initial gradient */
+    }
+    30%, 50% {
+      background-image: linear-gradient(135deg, #007bff, #8A2BE2); /* Intermediate gradient */
+    }
+    60%, 80% {
+      background-image: linear-gradient(135deg, #8A2BE2, #FFA500); /* Intermediate gradient */
+    }
+    90%, 100% {
+      background-image: linear-gradient(135deg, #FFA500, #24303E); /* Final gradient */
+    }
+  }
+  
+  
+  
+  
+  
+  
+  .footer .social-links {
+    text-align: center; /* Center the social links horizontally */
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  .footer .social-links a {
+    margin: 0 10px; /* Adjust the spacing between links */
+    color: #fff; /* Text color for the links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .footer .social-links a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  
+    
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
